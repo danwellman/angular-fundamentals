@@ -1,0 +1,229 @@
+.card::before {
+  display: block;
+  width: 8rem;
+  margin-bottom: -40px;
+  position: relative;
+  font-size: 12em;
+  line-height: 1em;
+  background-color: white;
+}
+
+.card.Red::before {
+  color: red;
+}
+
+.Spades {
+  &.Ace::before {
+    content: "\1F0A1";
+  }
+
+  &.value-2::before {
+    content: "\1F0A2";
+  }
+
+  &.value-3::before {
+    content: "\1F0A3";
+  }
+
+  &.value-4::before {
+    content: "\1F0A4";
+  }
+
+  &.value-5::before {
+    content: "\1F0A5";
+  }
+
+  &.value-6::before {
+    content: "\1F0A6";
+  }
+
+  &.value-7::before {
+    content: "\1F0A7";
+  }
+
+  &.value-8::before {
+    content: "\1F0A8";
+  }
+
+  &.value-9::before {
+    content: "\1F0A9";
+  }
+
+  &.value-10::before {
+    content: "\1F0AA";
+  }
+
+  &.Jack::before {
+    content: "\1F0AB";
+  }
+
+  &.Queen::before {
+    content: "\1F0AD";
+  }
+
+  &.King::before {
+    content: "\1F0AE";
+  }
+}
+
+.Hearts {
+  &.Ace::before {
+    content: "\1F0B1";
+  }
+
+  &.value-2::before {
+    content: "\1F0B2";
+  }
+
+  &.value-3::before {
+    content: "\1F0B3";
+  }
+
+  &.value-4::before {
+    content: "\1F0B4";
+  }
+
+  &.value-5::before {
+    content: "\1F0B5";
+  }
+
+  &.value-6::before {
+    content: "\1F0B6";
+  }
+
+  &.value-7::before {
+    content: "\1F0B7";
+  }
+
+  &.value-8::before {
+    content: "\1F0B8";
+  }
+
+  &.value-9::before {
+    content: "\1F0B9";
+  }
+
+  &.value-10::before {
+    content: "\1F0BA";
+  }
+
+  &.Jack::before {
+    content: "\1F0BB";
+  }
+
+  &.Queen::before {
+    content: "\1F0BD";
+  }
+
+  &.King::before {
+    content: "\1F0BE";
+  }
+}
+
+.Diamonds {
+  &.Ace::before {
+    content: "\1F0C1";
+  }
+
+  &.value-2::before {
+    content: "\1F0C2";
+  }
+
+  &.value-3::before {
+    content: "\1F0C3";
+  }
+
+  &.value-4::before {
+    content: "\1F0C4";
+  }
+
+  &.value-5::before {
+    content: "\1F0C5";
+  }
+
+  &.value-6::before {
+    content: "\1F0C6";
+  }
+
+  &.value-7::before {
+    content: "\1F0C7";
+  }
+
+  &.value-8::before {
+    content: "\1F0C8";
+  }
+
+  &.value-9::before {
+    content: "\1F0C9";
+  }
+
+  &.value-10::before {
+    content: "\1F0CA";
+  }
+
+  &.Jack::before {
+    content: "\1F0CB";
+  }
+
+  &.Queen::before {
+    content: "\1F0CD";
+  }
+
+  &.King::before {
+    content: "\1F0CE";
+  }
+}
+
+.Clubs {
+  &.Ace::before {
+    content: "\1F0D1";
+  }
+
+  &.value-2::before {
+    content: "\1F0D2";
+  }
+
+  &.value-3::before {
+    content: "\1F0D3";
+  }
+
+  &.value-4::before {
+    content: "\1F0D4";
+  }
+
+  &.value-5::before {
+    content: "\1F0D5";
+  }
+
+  &.value-6::before {
+    content: "\1F0D6";
+  }
+
+  &.value-7::before {
+    content: "\1F0D7";
+  }
+
+  &.value-8::before {
+    content: "\1F0D8";
+  }
+
+  &.value-9::before {
+    content: "\1F0D9";
+  }
+
+  &.value-10::before {
+    content: "\1F0DA";
+  }
+
+  &.Jack::before {
+    content: "\1F0DB";
+  }
+
+  &.Queen::before {
+    content: "\1F0DD";
+  }
+
+  &.King::before {
+    content: "\1F0DE";
+  }
+}

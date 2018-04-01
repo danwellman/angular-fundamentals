@@ -1,0 +1,12 @@
+<header>
+  <h1>{{ title }}</h1>
+  <span (click)="showFeedback()" class="feedback-link">Feedback</span>
+  <app-feedback *ngIf="viewFeedbackForm" (closeFeedbackForm)="hideFeedbackForm()"></app-feedback>
+
+  <a routerLink="/help" routerLinkActive="active">Help</a>
+</header>
+
+<router-outlet></router-outlet>
+<!--<app-start *ngIf="!gameStarted && !gameEnded" (start)="startGame($event)"></app-start>
+<app-game *ngIf="gameStarted" [player]="players[1]"></app-game>
+<app-end *ngIf="gameEnded"></app-end>-->

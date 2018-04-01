@@ -1,0 +1,66 @@
+form {
+  text-align: center;
+}
+
+label {
+  font-size: 2rem;
+  margin-right: 1rem;
+  float: left;
+
+  .error & {
+    color: red;
+  }
+}
+
+input, textarea {
+  width: 35%;
+  border: 1px solid #c7c5c7;
+  border-radius: 4px;
+  font-size: 2rem;
+  color: #666466;
+  padding: .5rem 1rem;
+  margin: 0;
+  float: right;
+
+  &:focus, &:active {
+    border-color: #212021;
+    color: #212021;
+    outline: none;
+  }
+
+  &[type=checkbox] {
+    display: none;
+  }
+
+  .error & {
+    border-color: red;
+  }
+}
+
+button {
+  font-size: 2rem;
+  border: 2px solid #c7c5c7;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  color: #666446;
+  background: #fff;
+  cursor: pointer;
+
+  &:hover, &:active {
+    border-color: #212021;
+    color: #212021;
+  }
+
+  &:disabled {
+    opacity: .25;
+    pointer-events: none;
+  }
+}
+
+.error {
+  span, small {
+    float: right;
+    margin: 1em 1em 0 0;
+    color: red;
+  }
+}

@@ -1,0 +1,32 @@
+.row {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+.checkbox {
+  display: block;
+  width: 53px;
+  height: 53px;
+  border: 1px solid #c7c5c7;
+  border-radius: 4px;
+  position: relative;
+  float: right;
+
+  &.checked::after {
+    position: absolute;
+    left: 2px;
+    top: -4px;
+    content: '\2713';
+    color: forestgreen;
+    font-size: 4em;
+    line-height: 1;
+  }
+}

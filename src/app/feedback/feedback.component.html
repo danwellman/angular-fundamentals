@@ -1,0 +1,26 @@
+<div class="feedback-form">
+  <form [formGroup]="feedbackForm">
+    <div class="row" [ngClass]="{ 'error': feedbackForm.get('name').touched && feedbackForm.get('name').invalid }">
+      <label>Name</label><input formControlName="name" appNameNotDealer />
+      <small *ngIf="feedbackForm.get('name').touched && feedbackForm.get('name').hasError('required')">Name is required!</small>
+      <small *ngIf="feedbackForm.get('name').touched && feedbackForm.get('name').hasError('nameNotDealer')">{{feedbackForm.get('name').getError('nameNotDealer')}}</small>
+    </div>
+    <div class="row" [ngClass]="{ 'error': feedbackForm.get('email').touched && feedbackForm.get('email').invalid }">
+      <label>Email address</label><input formControlName="email" />
+      <small *ngIf="feedbackForm.get('email').touched && feedbackForm.get('email').hasError('required')">Email is required!</small>
+      <small *ngIf="feedbackForm.get('email').touched && !feedbackForm.get('email').hasError('required') && feedbackForm.get('email').hasError('email')">Please use a valid email!</small>
+    </div>
+    <div class="row" [ngClass]="{ 'error': feedbackForm.get('telephone').touched && feedbackForm.get('telephone').invalid }">
+      <label>Telephone number</label><input formControlName="telephone" />
+      <small *ngIf="feedbackForm.get('telephone').touched && feedbackForm.get('telephone').hasError('pattern')">Please use only numbers!</small>
+    </div>
+    <div class="row" [ngClass]="{ 'error': feedbackForm.get('message').touched && feedbackForm.get('message').invalid }">
+      <label>Message</label><textarea formControlName="message"></textarea>
+      <small *ngIf="feedbackForm.get('message').touched && feedbackForm.get('message').hasError('required')">Message is required!</small>
+      <small *ngIf="feedbackForm.get('message').touched && feedbackForm.get('message').hasError('notAllCaps')">{{feedbackForm.get('message').getError('notAllCaps')}}</small>
+    </div>
+
+    <button [disabled]="!feedbackForm.valid">Send</button>
+    <span class="cancel" (click)="hideFeedbackForm()">Cancel</span>
+  </form>
+</div>

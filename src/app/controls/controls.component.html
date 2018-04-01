@@ -1,0 +1,7 @@
+<div class="controls">
+  <button *ngIf="showStickButton" (click)="dispatchEvent('stick')">Stick</button>
+  <button *ngIf="showHitButton" (click)="dispatchEvent('hit')">Hit me!</button>
+  <button *ngIf="showFactButton" (click)="dispatchEvent('fact')">Get number fact</button>
+  <button *ngIf="showQuitButton" (click)="dispatchEvent('quit')">Quit</button>
+  <button *ngIf="showAgainButton" (click)="dispatchEvent('again')">Play again!</button>
+</div>

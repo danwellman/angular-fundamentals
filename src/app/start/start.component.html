@@ -1,0 +1,21 @@
+<form #playerForm="ngForm" (submit)="startGame(playerForm)">
+  <h2>{{ CONSTANTS.PLAYER_TITLE }}</h2>
+
+  <div class="row" [ngClass]="{ 'error': !playerForm.valid && playerForm.touched }">
+    <label for="name">{{ CONSTANTS.PLAYER_NAME_LABEL }}</label><input name="name" [(ngModel)]="playerName" required appNameNotDealer />
+    <span *ngIf="playerForm.controls.name && playerForm.controls.name.errors && playerForm.controls.name.errors.required && playerForm.touched">Your name is required!</span>
+    <span *ngIf="playerForm.controls.name && playerForm.controls.name.errors && playerForm.controls.name.errors.nameNotDealer && playerForm.touched">
+      {{ playerForm.controls.name.errors.nameNotDealer }}
+    </span>
+  </div>
+
+  <div class="row">
+    <label for="acesHigh">{{ CONSTANTS.ACES_HIGH_LABEL }}</label><input name="acesHigh" type="checkbox" /><span class="checkbox" [class.checked]="acesHigh" (click)="toggleAces()"></span>
+  </div>
+
+  <div class="row">
+    <label for="easyMody">{{ CONSTANTS.EASY_MODE_LABEL }}</label><input name="easyMode" type="checkbox" /><span class="checkbox" [class.checked]="easyMode" (click)="toggleMode()"></span>
+  </div>
+
+  <button>{{ CONSTANTS.START_LABEL }}</button>
+</form>

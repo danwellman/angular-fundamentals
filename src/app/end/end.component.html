@@ -1,0 +1,13 @@
+<div class="hand">
+  <div class="playerInfo">
+    <h3>Dealer's hand:</h3>
+    <p>score: <b>{{ dealer.score }}</b></p>
+  </div>
+  <ul>
+    <li *ngFor="let card of dealer.hand" class="card {{ card.color }} {{ card.suit }} {{ card.name || 'value-' + card.value }}"><span>The {{ card.name || card.value }} of {{ card.suit }}</span></li>
+  </ul>
+</div>
+
+<h2 class="end-message">{{ gameService.endMessage }}</h2>
+
+<app-controls (quit)="doQuit()" (again)="doAgain()"></app-controls>
